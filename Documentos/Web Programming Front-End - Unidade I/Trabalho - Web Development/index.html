@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - Personagens dos Anos 90 e 2000</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rick and Morty</h1>
+            <p>Personagens de sucesso dos anos 90 e 2000</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="busca">
+            <h2>Explore os personagens</h2>
+            <input type="text" id="inputBusca" placeholder="Buscar por nome do personagem...">
+            <button id="btnBuscar">Buscar</button>
+        </section>
+
+        <!-- Filtros por status -->
+        <section id="filtros" class="filtros">
+            <h3>Filtrar por status:</h3>
+            <button class="btn-filtro" data-status="todos">Todos</button>
+            <button class="btn-filtro" data-status="Alive">Vivo</button>
+            <button class="btn-filtro" data-status="Dead">Morto</button>
+            <button class="btn-filtro" data-status="unknown">Desconhecido</button>
+        </section>
+
+        <div id="mensagem" class="mensagem"></div>
+
+        <section id="cards" class="grid-cards">
+            <!-- Os cards serão inseridos aqui dinamicamente pelo JavaScript -->
+        </section>
+
+        <section id="paginacao" class="paginacao">
+            <button id="btnAnterior" disabled>Anterior</button>
+            <span id="paginaAtual">Página 1</span>
+            <button id="btnProximo">Próxima</button>
+        </section>
+    </main>
+
+    <!-- Modal de detalhes do personagem -->
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <button id="btnFecharModal">&times;</button>
+            <div class="modal-imagem">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalNome">Nome</h2>
+                <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+                <p><strong>Espécie:</strong> <span id="modalEspecie"></span></p>
+                <p><strong>Gênero:</strong> <span id="modalGenero"></span></p>
+                <p><strong>Origem:</strong> <span id="modalOrigem"></span></p>
+                <p><strong>Localização:</strong> <span id="modalLocalizacao"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por: Erick &bull; Trabalho - Web Development Front-End</p>
+        </div>
+    </footer>
+</body>
+</html>
